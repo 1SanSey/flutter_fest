@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fest/application/UI/screen_factory/screen_factory.dart';
 
 abstract class Screens {
   static const main = "/";
 }
 
 class MainNavigation {
-  Map<String, WidgetBuilder> get routes =>
-      <String, WidgetBuilder>{Screens.main: (_) => const Text('Flutter Fest')};
+  final _screenFactory = ScreenFactory();
+  Map<String, WidgetBuilder> get routes => <String, WidgetBuilder>{
+        Screens.main: (_) => _screenFactory.makeMainTabs()
+      };
   Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     return null;
   }
