@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fest/application/UI/screens/main_tabs/shedule_widget.dart';
 import 'package:flutter_fest/resources/resources.dart';
 import 'package:flutter_fest/application/UI/screens/main_tabs/main_tabs_view_model.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class _BodyWidget extends StatelessWidget {
     return IndexedStack(
       index: currentIndex,
       children: const <Widget>[
-        Text('data1'),
+        SheduleWidget(),
         Text('data2'),
         Text('data3'),
       ],
