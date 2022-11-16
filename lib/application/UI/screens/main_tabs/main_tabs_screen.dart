@@ -10,26 +10,27 @@ class MainTabsScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(child: Container(color: Colors.white)),
-          const BottomBar(),
-          /* BottomNavigationBar(
-              currentIndex: 0,
-              onTap: (_) {},
-              items: <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: '',
-                ),
-              ]), */
+          //const BottomBar(),
+          /*  */
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          onTap: (_) {},
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: _Item(imageName: AppImages.tabbarCalendar),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: _Item(imageName: AppImages.tabbarBookmark),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: _Item(imageName: AppImages.tabbarPoint),
+              label: '',
+            ),
+          ]),
     );
   }
 }
